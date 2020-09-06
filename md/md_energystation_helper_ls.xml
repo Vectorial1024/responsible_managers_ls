@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mdscript name="RM_EnergyStationHelper_LostSectors" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="SetupEnergyStationValuePairs_Vanilla" checktime="0.1s" checkinterval="0.1s">
+			<conditions>
+				<check_any>
+					<cue_is_complete cue="md.RM_EnergyStationHelper.SetupEnergyStationValuePairs_Vanilla"/>
+				</check_any>
+			</conditions>
+			<actions>
+				<!-- Hardcoded inputting -->
+				<append_to_list name="md.$energyStations_ValuePairs" exact="[macro.struct_bt_ls_terran_solar_power_plant_macro, ware.foodrations]"/>
+			</actions>
+		</cue>
+	</cues>
+</mdscript>
